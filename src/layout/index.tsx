@@ -14,6 +14,9 @@ import { FooterTitle } from '../components/Elements/Footer/FooterTitle';
 import { FooterLink } from '../components/Elements/Footer/FooterLink';
 import { FooterSecondSection } from '../components/Elements/Footer/FooterSecondSection';
 import { FooterThirdSection } from '../components/Elements/Footer/FooterThirdSection';
+import { FooterAttach } from '../components/Elements/Footer/FooterAttach';
+import { Divider } from '../components/Elements/Divider';
+import { Text } from '../components/Typography/Text'
 
 interface LayoutProps {
     children: ReactNode;
@@ -104,8 +107,21 @@ export default function Layout({ children }: LayoutProps) {
                         url='/'
                     />
                 </FooterThirdSection>
-
             </Footer>
+            <FooterAttach
+                style={{
+                    backgroundColor: theme.colors.black
+                }}
+            >
+                <Divider />
+                <Text
+                    content='PabloSilvaDev - © Copyright  2022'
+                    style={{
+                        color: theme.colors.white
+                    }}
+
+                />
+            </FooterAttach>
         </Container>
     )
 }
