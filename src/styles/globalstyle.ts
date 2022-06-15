@@ -11,13 +11,14 @@ export const GlobalStyle = createGlobalStyle`
     html{
         font-family: monospace;
         scroll-behavior: smooth;
-        background: ${(props) => props.theme.colors.element_base};
+        background: ${(props) => props.theme.colors.title};
     }
 
     body{
         overflow-x: hidden;
         width: 100%;
         height: 100vh;
+        background: ${(props) => props.theme.colors.title};
     }
     button{
         display: flex;

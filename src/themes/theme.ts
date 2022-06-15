@@ -20,6 +20,7 @@ const theme = {
       white: "#ffffff",
       silver: "#C0C0C0",
       black: "#000000",
+      blacklight: "#212020",
     },
     fonts: {
       default: "Poppins",
