@@ -39,7 +39,6 @@ import { profiles } from '../data/data'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
 import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo'
 import { PrimaryButton } from '../components/Elements/PrimaryButton'
-import { RevealFade } from '../components/Animations/RevealFade'
 
 const Home: NextPage = () => {
 
