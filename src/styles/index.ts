@@ -83,7 +83,7 @@ export const BannerSectionContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 1080px;
-  @media (max-width: 720px) {
+  @media (max-width: 1080px) {
     flex-direction: column;
     width: 100%;
   }
@@ -172,7 +172,7 @@ export const MetricsSectionContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 1080px;
-  @media (max-width: 720px) {
+  @media (max-width: 1080px) {
     width: 100%;
   }
 `;
@@ -213,7 +213,7 @@ export const TestimonialSectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 1080px;
-  @media (max-width: 720px) {
+  @media (max-width: 1080px) {
     width: 100%;
   }
   & h3 {
@@ -241,7 +241,7 @@ export const FaqSectionSectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 1080px;
-  @media (max-width: 720px) {
+  @media (max-width: 1080px) {
     width: 100%;
   }
   & h3 {

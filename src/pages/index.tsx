@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import dynamic from 'next/dynamic'
-const CountUp = dynamic(() => import('react-countup'), { ssr: false });
 
 import Head from 'next/head'
 import {
@@ -39,6 +38,7 @@ import { profiles } from '../data/data'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
 import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo'
 import { PrimaryButton } from '../components/Elements/PrimaryButton'
+import { CountUpAnimation } from '../components/Animations/CountUp'
 
 const Home: NextPage = () => {
 
@@ -92,7 +92,7 @@ const Home: NextPage = () => {
         <MetricsSectionContainer id="metrics">
           <MetricsSectionContentContainer>
             <CountUpContainer>
-              <CountUp
+              <CountUpAnimation
                 start={0}
                 end={97}
                 duration={3}
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
               />
             </CountUpContainer>
             <CountUpContainer>
-              <CountUp
+              <CountUpAnimation
                 start={12}
                 end={182}
                 duration={2}
@@ -120,7 +120,7 @@ const Home: NextPage = () => {
               />
             </CountUpContainer>
             <CountUpContainer>
-              <CountUp
+              <CountUpAnimation
                 start={12}
                 end={455}
                 duration={2}

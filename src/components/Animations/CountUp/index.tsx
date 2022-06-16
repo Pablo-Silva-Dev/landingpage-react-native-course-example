@@ -1,5 +1,9 @@
+import dynamic from 'next/dynamic';
+
 import { CSSProperties, ReactNode } from 'react';
-import CountUp from 'react-countup'
+const CountUp = dynamic(() => import('react-countup'), { ssr: false });
+
+
 
 interface CountUpProps {
     start: number;
