@@ -4,8 +4,29 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
+  position: relative;
   background-color: ${({ theme }) => theme.colors.black300};
+
+  & .headerScrolling {
+    position: fixed;
+    background-color: ${({ theme }) => theme.colors.black100};
+    z-index: 999;
+    padding: 0 12px;
+    transition: all .8s ease;
+  }
+
+  & .headerNotScrolling {
+    background: transparent;
+    transition: all .8s ease;
+    padding: 8px 12px;
+  }
+
+  & .animatedTopScroll {
+    right: 24px;
+    transition: all 0.3s ease;
+  }
+  & .normalTopScroll {
+    right: -80px;
+    transition: all 0.3s ease;
+  }
 `;
-
-

@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import {
   MdAccessibilityNew,
+  MdArrowUpward,
   MdOutlineHourglassBottom,
   MdOutlinePlayLesson
 } from 'react-icons/md'
@@ -37,6 +38,8 @@ import { Container } from '../styles'
 import { profiles } from '../data/data'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
 import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo'
+import { PrimaryButton } from '../components/Elements/PrimaryButton'
+import { RevealFade } from '../components/Animations/RevealFade'
 
 const Home: NextPage = () => {
 
@@ -47,7 +50,8 @@ const Home: NextPage = () => {
       <Head>
         <title>PSD | NativePro</title>
       </Head>
-      <BannerSection id='#banner'>
+
+      <BannerSection id='banner'>
         <BannerSectionContainer>
           <BannerSectionTitleContainer>
             <GradientText
@@ -70,7 +74,7 @@ const Home: NextPage = () => {
           </BannerSectionImageContainer>
         </BannerSectionContainer>
       </BannerSection>
-      <IntroductionSection id='#introduction'>
+      <IntroductionSection id='introduction'>
         <IntroductionSectionContainer>
           <IntroductionSectionContentContainer>
             <SubTitle
@@ -86,7 +90,7 @@ const Home: NextPage = () => {
         </IntroductionSectionContainer>
       </IntroductionSection>
       <MetricsSection>
-        <MetricsSectionContainer id="#metrics">
+        <MetricsSectionContainer id="metrics">
           <MetricsSectionContentContainer>
             <CountUpContainer>
               <CountUpAnimation
@@ -134,7 +138,7 @@ const Home: NextPage = () => {
           </MetricsSectionContentContainer>
         </MetricsSectionContainer>
       </MetricsSection>
-      <TestimonialsSection id='#testimonials'>
+      <TestimonialsSection id='testimonials'>
         <TestimonialSectionContainer>
           <SubTitle
             content='Veja o que nossos alunos dizem'
@@ -162,46 +166,50 @@ const Home: NextPage = () => {
           </CardSlider>
         </TestimonialSectionContainer>
       </TestimonialsSection>
-      <FaqSection>
+      <FaqSection id='faq'>
         <FaqSectionSectionContainer>
           <SubTitle
             content='Perguntas frequentes'
           />
           <FaqSectionCollapsableContainer>
-            <CollapsibleInfo 
+            <CollapsibleInfo
               title='O acesso é vitalício?'
               content='Sim o acesso ao curso é vitalício.'
               contentContainerClassName='collapsibleContent'
-              titleStyle={{color: theme.colors.white100}}
+              titleStyle={{ color: theme.colors.white100 }}
             />
-            <CollapsibleInfo 
+            <CollapsibleInfo
               title='De onde posso acessar o curso?'
               content='Você pode acessar o curso de qualquer dispositivo com conexão com a interface.'
-                contentContainerClassName='collapsibleContent'
-              titleStyle={{color: theme.colors.white100}}
-              
+              contentContainerClassName='collapsibleContent'
+              titleStyle={{ color: theme.colors.white100 }}
+
             />
-            <CollapsibleInfo 
+            <CollapsibleInfo
               title='Vou ter suporte para dúvidas?'
               content='Sim. Você tera direito a suporte de segunda à sexta, exceto feriados.'
-                contentContainerClassName='collapsibleContent'
-              titleStyle={{color: theme.colors.white100}}
-              
+              contentContainerClassName='collapsibleContent'
+              titleStyle={{ color: theme.colors.white100 }}
+
             />
-            <CollapsibleInfo 
+            <CollapsibleInfo
               title='Existe um grupo de apoio?'
               content='Sim. Ao adquirir o curso, você terá livre acesso ao nosso grupo do Whatsapp.'
-                contentContainerClassName='collapsibleContent'
-              titleStyle={{color: theme.colors.white100}}
-              
+              contentContainerClassName='collapsibleContent'
+              titleStyle={{ color: theme.colors.white100 }}
+
             />
-            <CollapsibleInfo 
+            <CollapsibleInfo
               title='Posso pedir reembolso?'
               content='Sim. Caso você não goste do curso por qualquer motivo, você tem 7 dias úteis para pedir reembolso.'
-                contentContainerClassName='collapsibleContent'
-              titleStyle={{color: theme.colors.white100}}
+              contentContainerClassName='collapsibleContent'
+              titleStyle={{ color: theme.colors.white100 }}
             />
           </FaqSectionCollapsableContainer>
+          <PrimaryButton
+            title='Adquirir curso'
+            onClick={() => { }}
+          />
         </FaqSectionSectionContainer>
       </FaqSection>
     </Container>

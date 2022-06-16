@@ -39,19 +39,35 @@ export const Container = styled.div`
     }
   }
 
-
-
   & .collapsibleContent {
     padding: 8px;
 
     & p {
       color: ${({ theme }) => theme.colors.secondary};
       font-size: ${({ theme }) => theme.sizes.normal};
-      @media(max-width: 720px){
+      @media (max-width: 720px) {
         font-size: ${({ theme }) => theme.sizes.small};
-
       }
     }
+  }
+
+  & .headerScrolling {
+    position: fixed;
+    height: 40px;
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  & .headerNotScrolling {
+    background-color: ${({ theme }) => theme.colors.black100};
+  }
+
+  & .animatedTopScroll {
+    right: 24px;
+    transition: all 0.3s ease;
+  }
+  & .normalTopScroll {
+    right: -80px;
+    transition: all 0.3s ease;
   }
 `;
 
@@ -220,6 +236,13 @@ export const FaqSectionSectionContainer = styled.div`
   & h3 {
     color: ${({ theme }) => theme.colors.secondary};
     margin: 24px auto;
+  }
+  & button {
+    width: 800px;
+    margin-top: 24px;
+    @media (max-width: 720px) {
+      width: 96%;
+    }
   }
 `;
 
