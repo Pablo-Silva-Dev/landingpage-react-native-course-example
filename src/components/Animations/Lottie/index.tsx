@@ -46,6 +46,7 @@ export function LottieAnimation({
             options={defaultOptions}
             height={height}
             width={width}
+            //@ts-ignore
             loop={loop}
             autoplay={autoplay}
             style={style}
