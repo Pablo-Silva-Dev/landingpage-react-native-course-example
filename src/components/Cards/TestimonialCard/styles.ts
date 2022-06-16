@@ -13,7 +13,7 @@ export const SubContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 320px;
+  width: 400px;
   min-height: 320px;
   padding: 16px;
   margin: 4px auto;
@@ -21,7 +21,7 @@ export const SubContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.white100};
   box-shadow: ${({ theme }) => theme.shadows.soft};
   @media (max-width: 720px) {
-    width: 98%;
+    width: 88%;
   }
 `;
 
@@ -38,7 +38,7 @@ export const Text = styled.p`
   margin: 12px 0;
   text-align: center;
   word-wrap: break-word;
-  width: 100%;
+  width: 96%;
   @media (max-width: 720px) {
     font-size: ${({ theme }) => theme.sizes.normal};
   }

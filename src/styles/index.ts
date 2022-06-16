@@ -30,6 +30,17 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.colors.secondary};
   }
 
+  & .sliderArrow{
+
+    width: 72%;
+    margin: 0 auto;
+
+    @media(max-width: 720px) {
+      width: 32%;
+    }
+  
+  }
+
 `;
 
 export const BannerSection = styled.section`
@@ -154,5 +165,25 @@ export const CountUpContainer = styled.div`
   }
 `;
 
-export const TestimonialsSection = styled.section``;
+export const TestimonialsSection = styled.section`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 32vh;
+  background-color: ${({ theme }) => theme.colors.black500};
+  `;
+
+export const TestimonialSectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 1080px;
+  & h3 {
+    color: ${({ theme }) => theme.colors.secondary};
+    margin: 24px auto;
+  }
+`;
+
 export const FaqSection = styled.section``;

@@ -6,7 +6,9 @@ import {
   MdOutlinePlayLesson
 } from 'react-icons/md'
 import { useTheme } from 'styled-components'
+
 import { CountUpAnimation } from '../components/Animations/CountUp'
+import { CardSlider } from '../components/Elements/CardSlider'
 import { NextImage } from '../components/Next/NextImage'
 import { GradientText } from '../components/Typography/GradientText'
 import { SubTitle } from '../components/Typography/SubTitle'
@@ -24,8 +26,13 @@ import {
   MetricsSection,
   MetricsSectionContainer,
   MetricsSectionContentContainer,
+  TestimonialSectionContainer,
+  TestimonialsSection,
 } from '../styles'
 import { Container } from '../styles'
+
+import { profiles } from '../data/data'
+import { TestimonialCard } from '../components/Cards/TestimonialCard'
 
 const Home: NextPage = () => {
 
@@ -75,7 +82,7 @@ const Home: NextPage = () => {
         </IntroductionSectionContainer>
       </IntroductionSection>
       <MetricsSection>
-        <MetricsSectionContainer>
+        <MetricsSectionContainer id="#metrics">
           <MetricsSectionContentContainer>
             <CountUpContainer>
               <CountUpAnimation
@@ -111,6 +118,7 @@ const Home: NextPage = () => {
                 end={455}
                 duration={3}
                 className='countUp'
+                prefix='+ de '
               />
               <Text
                 content='Alunos impactados'
@@ -120,9 +128,36 @@ const Home: NextPage = () => {
               />
             </CountUpContainer>
           </MetricsSectionContentContainer>
-
         </MetricsSectionContainer>
       </MetricsSection>
+      <TestimonialsSection>
+        <TestimonialSectionContainer>
+          <SubTitle 
+            content='Veja o que nossos alunos dizem'
+          />
+          <CardSlider
+            slidesToScroll={1}
+            slidesToShow={1}
+            showArrows
+            autoPlay
+            infiniteLoop
+            sliderContainerClassName='sliderArrow'
+          >
+            {profiles.map(profile => (
+              <TestimonialCard
+                key={profile.name}
+                personName={profile.name}
+                personPhotoUrl={profile.url}
+                testimonial={profile.testimonial}
+                ratings={profile.ratings}
+                titleClassName='lightTitle'
+                testimonialClassName='lightText'
+                cardStyle={{backgroundColor: theme.colors.black100}}
+              />
+            ))}
+          </CardSlider>
+        </TestimonialSectionContainer>
+      </TestimonialsSection>
     </Container>
   )
 }
