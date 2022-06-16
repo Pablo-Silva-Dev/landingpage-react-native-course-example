@@ -35,7 +35,7 @@ export const Container = styled.div`
     margin: 0 auto;
 
     @media (max-width: 720px) {
-      width: 32%;
+      width: 80%;
     }
   }
 
@@ -147,7 +147,7 @@ export const IntroductionSectionContentContainer = styled.div`
   & h3 {
     color: ${({ theme }) => theme.colors.secondary};
     @media (max-width: 720px) {
-      width: 32%;
+      width: 88%;
     }
   }
 
@@ -155,7 +155,7 @@ export const IntroductionSectionContentContainer = styled.div`
     width: 540px;
     color: ${({ theme }) => theme.colors.white400};
     @media (max-width: 720px) {
-      width: 32%;
+      width: 88%;
     }
   }
 `;

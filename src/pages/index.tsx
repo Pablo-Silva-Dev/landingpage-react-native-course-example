@@ -1,20 +1,20 @@
 import type { NextPage } from 'next'
+import dynamic from 'next/dynamic'
+const CountUp = dynamic(() => import('react-countup'), { ssr: false });
+
 import Head from 'next/head'
 import {
   MdAccessibilityNew,
-  MdArrowUpward,
   MdOutlineHourglassBottom,
   MdOutlinePlayLesson
 } from 'react-icons/md'
 import { useTheme } from 'styled-components'
 
-import { CountUpAnimation } from '../components/Animations/CountUp'
 import { CardSlider } from '../components/Elements/CardSlider'
 import { NextImage } from '../components/Next/NextImage'
 import { GradientText } from '../components/Typography/GradientText'
 import { SubTitle } from '../components/Typography/SubTitle'
 import { Text } from '../components/Typography/Text'
-import { Title } from '../components/Typography/Title'
 import {
   BannerSection,
   BannerSectionContainer,
@@ -92,10 +92,10 @@ const Home: NextPage = () => {
         <MetricsSectionContainer id="metrics">
           <MetricsSectionContentContainer>
             <CountUpContainer>
-              <CountUpAnimation
+              <CountUp
                 start={0}
                 end={97}
-                duration={1}
+                duration={3}
                 className='countUp'
               />
               <Text
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
               />
             </CountUpContainer>
             <CountUpContainer>
-              <CountUpAnimation
+              <CountUp
                 start={12}
                 end={182}
                 duration={2}
@@ -120,10 +120,10 @@ const Home: NextPage = () => {
               />
             </CountUpContainer>
             <CountUpContainer>
-              <CountUpAnimation
+              <CountUp
                 start={12}
                 end={455}
-                duration={3}
+                duration={2}
                 className='countUp'
                 prefix='+ de '
               />
