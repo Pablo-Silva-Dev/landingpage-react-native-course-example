@@ -16,7 +16,6 @@ import { HeaderLink } from '../components/Elements/Header/HeaderLink';
 import { HeaderLinksContainer } from '../components/Elements/Header/HeaderLinksContainer';
 import { HeaderLogoContainer } from '../components/Elements/Header/HeaderLogoContainer';
 import { Logo } from '../components/Elements/Logo';
-import { NavLink } from '../components/Elements/Nav/NavLink';
 import { PrimaryButton } from '../components/Elements/PrimaryButton';
 import { SocialIcons } from '../components/Elements/SocialIcons';
 import { TopScrollButton } from '../components/Elements/TopScrollButton';
@@ -90,17 +89,17 @@ export default function Layout({ children }: LayoutProps) {
                             backgroundColor: theme.colors.black100
                         }}
                     >
-                        <NavLink
+                        <HeaderLink
                             content='Sobre o curso'
                             url='/#metrics'
                             onClick={handleToggleDrawer}
                         />
-                        <NavLink
+                        <HeaderLink
                             content='O que dizem sobre o curso'
                             url='/#testimonials'
                             onClick={handleToggleDrawer}
                         />
-                        <NavLink
+                        <HeaderLink
                             content='Adquirir curso'
                             url='/#faq'
                             onClick={handleToggleDrawer}
