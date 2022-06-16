@@ -8,7 +8,6 @@ export const Container = styled.a`
   word-wrap: break-word;
   cursor: pointer;
   @media (max-width: 720px){
-    width: 100%;
     font-size: ${({ theme }) => theme.sizes.medium};
   }
 `;

@@ -6,10 +6,15 @@ export const Container = styled.div`
   width: 100%;
 
   & .lightTitle {
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white100};
   }
 
   & .lightText {
-    color: ${({ theme }) => theme.colors.silver};
+    color: ${({ theme }) => theme.colors.silver100};
+  }
+
+  & .alignItems{
+    margin: 0 auto;
+    color: red;
   }
 `;

@@ -25,7 +25,10 @@ export function Drawer({
     toggleDrawer,
     children,
     style,
+    className,
     buttonStyle,
+    menuStyle,
+    menuClassName
 }: DrawerProps) {
 
     const theme = useTheme()
@@ -34,9 +37,12 @@ export function Drawer({
         <Container
             direction={direction}
             role='menu'
+            style={style}
+            className={className}
         >
             <MenuContainer
-                style={style}
+                style={menuStyle}
+                className={menuClassName}
             >
                 <CloseMenuButton
                     style={buttonStyle}
@@ -44,7 +50,7 @@ export function Drawer({
                     <MdClose
                         onClick={toggleDrawer}
                         size={32}
-                        color={theme.colors.white}
+                        color={theme.colors.white100}
                         role='dialog'
                     />
                 </CloseMenuButton>
