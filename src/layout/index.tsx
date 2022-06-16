@@ -92,7 +92,7 @@ export default function Layout({ children }: LayoutProps) {
                 </HeaderLinksContainer>
                 <HeaderAuthenticationContainer>
                     <PrimaryButton
-                        title='Purchase now'
+                        title='Adquirir curso'
                         onClick={() => { }}
                         style={{
                             backgroundColor: theme.colors.primary
