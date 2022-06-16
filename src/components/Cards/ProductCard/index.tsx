@@ -9,8 +9,17 @@ import { useTheme } from 'styled-components';
 
 import { CSSProperties, ReactNode } from 'react';
 import {
-    Container, FavoriteButton, PriceOnCreditText, PriceText, PurchaseButton, RatingsContainer, ShareButton,
-    SubContainer, Title
+
+  Container,
+  FavoriteButton,
+  PriceOnCreditText,
+  PriceText,
+  PurchaseButton,
+  RatingsContainer,
+  ShareButton,
+  SubContainer,
+  Title
+
 } from './styles';
 
 interface ProductCardProps {
@@ -114,7 +123,7 @@ export function ProductCard({
         />
         <RatingsContainer>
           <StarRatings
-            rating={parseInt(ratings)}
+            rating={parseInt(ratings!)}
             starRatedColor="#ffc400"
             numberOfStars={5}
             starDimension="20px"
