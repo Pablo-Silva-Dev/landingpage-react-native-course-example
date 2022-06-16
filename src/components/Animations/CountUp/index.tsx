@@ -45,7 +45,7 @@ export function CountUpAnimation({
         >
             {({ countUpRef }) => (
                 <>
-                    <span style={style} ref={countUpRef} />
+                    <span style={style} className={className} ref={countUpRef} />
                 </>
             )}
         </CountUp>

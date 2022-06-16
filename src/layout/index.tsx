@@ -85,10 +85,6 @@ export default function Layout({ children }: LayoutProps) {
                         content='Sobre o curso'
                         url='/'
                     />
-                    <HeaderLink
-                        content='Adquirir curso'
-                        url='/'
-                    />
                 </HeaderLinksContainer>
                 <HeaderAuthenticationContainer>
                     <PrimaryButton

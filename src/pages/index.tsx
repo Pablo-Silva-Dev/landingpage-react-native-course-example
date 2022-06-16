@@ -1,6 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import {
+  MdAccessibilityNew,
+  MdOutlineHourglassBottom,
+  MdOutlinePlayLesson
+} from 'react-icons/md'
 import { useTheme } from 'styled-components'
+import { CountUpAnimation } from '../components/Animations/CountUp'
 import { NextImage } from '../components/Next/NextImage'
 import { GradientText } from '../components/Typography/GradientText'
 import { SubTitle } from '../components/Typography/SubTitle'
@@ -11,9 +17,13 @@ import {
   BannerSectionContainer,
   BannerSectionImageContainer,
   BannerSectionTitleContainer,
+  CountUpContainer,
   IntroductionSection,
   IntroductionSectionContainer,
-  IntroductionSectionContentContainer
+  IntroductionSectionContentContainer,
+  MetricsSection,
+  MetricsSectionContainer,
+  MetricsSectionContentContainer,
 } from '../styles'
 import { Container } from '../styles'
 
@@ -53,17 +63,66 @@ const Home: NextPage = () => {
         <IntroductionSectionContainer>
           <IntroductionSectionContentContainer>
             <SubTitle
-             content='Por que eu deveria aprender React Native?'
+              content='Por que eu deveria aprender React Native?'
             />
-            <Text 
+            <Text
               content='O mercado de desenvolvimento de aplicativos móveis está cada vez mais em alta. Segundo uma pesquisa realizada no Linkedin, o mercado brasileiro irá de precisar de mais 200 mil novos profissionais até 2025.'
             />
-            <Text 
-              content='Se você tem o desejo de entrar para o mercado de desenvolvimento mobile, ou se você já é desenvolvedor e deseja aprimorar seus conhecimentos e  habilidades, o NativePro foi feito para você!.'
+            <Text
+              content='Se você tem o desejo de entrar para o mercado de desenvolvimento mobile, ou se você já é desenvolvedor e deseja aprimorar seus conhecimentos e  habilidades, o NativePro foi feito para você!'
             />
           </IntroductionSectionContentContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>
+      <MetricsSection>
+        <MetricsSectionContainer>
+          <MetricsSectionContentContainer>
+            <CountUpContainer>
+              <CountUpAnimation
+                start={0}
+                end={97}
+                duration={1}
+                className='countUp'
+              />
+              <Text
+                content='Horas de conteúdo'
+              />
+              <MdOutlineHourglassBottom
+                className='metricIcon'
+              />
+            </CountUpContainer>
+            <CountUpContainer>
+              <CountUpAnimation
+                start={12}
+                end={182}
+                duration={2}
+                className='countUp'
+              />
+              <Text
+                content='Video aulas'
+              />
+              <MdOutlinePlayLesson
+                className='metricIcon'
+              />
+            </CountUpContainer>
+            <CountUpContainer>
+              <CountUpAnimation
+                start={12}
+                end={455}
+                duration={3}
+                className='countUp'
+              />
+              <Text
+                content='Alunos impactados'
+              />
+              <MdAccessibilityNew
+                className='metricIcon'
+              />
+            </CountUpContainer>
+          </MetricsSectionContentContainer>
+
+        </MetricsSectionContainer>
+      </MetricsSection>
     </Container>
   )
 }
