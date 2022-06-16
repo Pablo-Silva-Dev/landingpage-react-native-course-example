@@ -20,6 +20,9 @@ import {
   BannerSectionImageContainer,
   BannerSectionTitleContainer,
   CountUpContainer,
+  FaqSection,
+  FaqSectionCollapsableContainer,
+  FaqSectionSectionContainer,
   IntroductionSection,
   IntroductionSectionContainer,
   IntroductionSectionContentContainer,
@@ -33,6 +36,7 @@ import { Container } from '../styles'
 
 import { profiles } from '../data/data'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
+import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo'
 
 const Home: NextPage = () => {
 
@@ -130,9 +134,9 @@ const Home: NextPage = () => {
           </MetricsSectionContentContainer>
         </MetricsSectionContainer>
       </MetricsSection>
-      <TestimonialsSection>
+      <TestimonialsSection id='#testimonials'>
         <TestimonialSectionContainer>
-          <SubTitle 
+          <SubTitle
             content='Veja o que nossos alunos dizem'
           />
           <CardSlider
@@ -152,12 +156,54 @@ const Home: NextPage = () => {
                 ratings={profile.ratings}
                 titleClassName='lightTitle'
                 testimonialClassName='lightText'
-                cardStyle={{backgroundColor: theme.colors.black100}}
+                cardStyle={{ backgroundColor: theme.colors.black100 }}
               />
             ))}
           </CardSlider>
         </TestimonialSectionContainer>
       </TestimonialsSection>
+      <FaqSection>
+        <FaqSectionSectionContainer>
+          <SubTitle
+            content='Perguntas frequentes'
+          />
+          <FaqSectionCollapsableContainer>
+            <CollapsibleInfo 
+              title='O acesso é vitalício?'
+              content='Sim o acesso ao curso é vitalício.'
+              contentContainerClassName='collapsibleContent'
+              titleStyle={{color: theme.colors.white100}}
+            />
+            <CollapsibleInfo 
+              title='De onde posso acessar o curso?'
+              content='Você pode acessar o curso de qualquer dispositivo com conexão com a interface.'
+                contentContainerClassName='collapsibleContent'
+              titleStyle={{color: theme.colors.white100}}
+              
+            />
+            <CollapsibleInfo 
+              title='Vou ter suporte para dúvidas?'
+              content='Sim. Você tera direito a suporte de segunda à sexta, exceto feriados.'
+                contentContainerClassName='collapsibleContent'
+              titleStyle={{color: theme.colors.white100}}
+              
+            />
+            <CollapsibleInfo 
+              title='Existe um grupo de apoio?'
+              content='Sim. Ao adquirir o curso, você terá livre acesso ao nosso grupo do Whatsapp.'
+                contentContainerClassName='collapsibleContent'
+              titleStyle={{color: theme.colors.white100}}
+              
+            />
+            <CollapsibleInfo 
+              title='Posso pedir reembolso?'
+              content='Sim. Caso você não goste do curso por qualquer motivo, você tem 7 dias úteis para pedir reembolso.'
+                contentContainerClassName='collapsibleContent'
+              titleStyle={{color: theme.colors.white100}}
+            />
+          </FaqSectionCollapsableContainer>
+        </FaqSectionSectionContainer>
+      </FaqSection>
     </Container>
   )
 }

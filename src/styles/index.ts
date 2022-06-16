@@ -24,23 +24,35 @@ export const Container = styled.div`
     font-weight: 800;
   }
 
-  & .metricIcon{
+  & .metricIcon {
     width: 40px;
     height: 40px;
     color: ${({ theme }) => theme.colors.secondary};
   }
 
-  & .sliderArrow{
-
+  & .sliderArrow {
     width: 72%;
     margin: 0 auto;
 
-    @media(max-width: 720px) {
+    @media (max-width: 720px) {
       width: 32%;
     }
-  
   }
 
+
+
+  & .collapsibleContent {
+    padding: 8px;
+
+    & p {
+      color: ${({ theme }) => theme.colors.secondary};
+      font-size: ${({ theme }) => theme.sizes.normal};
+      @media(max-width: 720px){
+        font-size: ${({ theme }) => theme.sizes.small};
+
+      }
+    }
+  }
 `;
 
 export const BannerSection = styled.section`
@@ -170,8 +182,8 @@ export const TestimonialsSection = styled.section`
   justify-content: center;
   width: 100%;
   min-height: 32vh;
-  background-color: ${({ theme }) => theme.colors.black500};
-  `;
+  background-color: ${({ theme }) => theme.colors.black400};
+`;
 
 export const TestimonialSectionContainer = styled.div`
   display: flex;
@@ -186,4 +198,40 @@ export const TestimonialSectionContainer = styled.div`
   }
 `;
 
-export const FaqSection = styled.section``;
+export const FaqSection = styled.section`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 40vh;
+  background-color: ${({ theme }) => theme.colors.black500};
+  & h3 {
+    color: ${({ theme }) => theme.colors.primary};
+    margin: 24px auto;
+  }
+`;
+
+export const FaqSectionSectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 1080px;
+  & h3 {
+    color: ${({ theme }) => theme.colors.secondary};
+    margin: 24px auto;
+  }
+`;
+
+export const FaqSectionCollapsableContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 800px;
+  min-height: 480px;
+  padding: 24px;
+  background-color: ${({ theme }) => theme.colors.black100};
+  @media (max-width: 720px) {
+    width: 96%;
+  }
+`;
