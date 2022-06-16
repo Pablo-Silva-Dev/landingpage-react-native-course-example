@@ -52,7 +52,6 @@ export default function Layout({ children }: LayoutProps) {
         //@ts-ignore
         const topPos = window.scrollY
         if (topPos > 500) {
-            console.log(topPos)
             setScrollTopAnimation(true)
         } else {
             setScrollTopAnimation(false)

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
 
   & .lightTitle {
     color: ${({ theme }) => theme.colors.white100};
@@ -85,6 +85,7 @@ export const BannerSectionContainer = styled.div`
   width: 1080px;
   @media (max-width: 720px) {
     flex-direction: column;
+    width: 100%;
   }
 `;
 
@@ -141,6 +142,7 @@ export const IntroductionSectionContentContainer = styled.div`
   height: 100%;
   @media (max-width: 720px) {
     flex-direction: column;
+    width: 100%;
   }
   & h3 {
     color: ${({ theme }) => theme.colors.secondary};
@@ -170,6 +172,9 @@ export const MetricsSectionContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 1080px;
+  @media (max-width: 720px) {
+    width: 100%;
+  }
 `;
 
 export const MetricsSectionContentContainer = styled.div`
@@ -208,6 +213,9 @@ export const TestimonialSectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 1080px;
+  @media (max-width: 720px) {
+    width: 100%;
+  }
   & h3 {
     color: ${({ theme }) => theme.colors.secondary};
     margin: 24px auto;
@@ -233,6 +241,9 @@ export const FaqSectionSectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 1080px;
+  @media (max-width: 720px) {
+    width: 100%;
+  }
   & h3 {
     color: ${({ theme }) => theme.colors.secondary};
     margin: 24px auto;

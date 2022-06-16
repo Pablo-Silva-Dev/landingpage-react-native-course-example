@@ -84,9 +84,5 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         
   }
-  .collapsible-info-parent{
-    width: 100%;
-    cursor: pointer;
-  }
     
 `;
