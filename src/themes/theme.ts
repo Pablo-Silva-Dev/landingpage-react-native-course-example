@@ -35,7 +35,7 @@ const theme = {
   },
   fonts: {
     default: "Poppins",
-    secondary: "Montserrat",
+    secondary: "Oswald",
   },
   sizes: {
     xxsmall: ".64rem",

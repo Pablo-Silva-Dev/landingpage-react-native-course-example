@@ -23,7 +23,6 @@ export function NextImage({
 
     return (
         <Container>
-
             {isAmp ? (
                 <NextImageComponent
                     width={width}
@@ -38,6 +37,8 @@ export function NextImage({
                     width={width}
                     height={height}
                     src={imgUrl}
+                    style={style}
+                    className={className}
                 />
             )}
         </Container>
