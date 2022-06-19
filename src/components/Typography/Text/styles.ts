@@ -8,6 +8,5 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.colors.text};
   @media (max-width: 720px) {
     font-size: ${({ theme }) => theme.sizes.normal};
-    font-family: ${({ theme }) => theme.fonts.secondary};
   }
 `;

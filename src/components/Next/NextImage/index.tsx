@@ -31,6 +31,7 @@ export function NextImage({
                     style={style}
                     className={className}
                     layout="responsive"
+                    priority
                 />
             ) : (
                 <NextImageComponent
@@ -39,6 +40,7 @@ export function NextImage({
                     src={imgUrl}
                     style={style}
                     className={className}
+                    priority
                 />
             )}
         </Container>
