@@ -84,5 +84,105 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         
   }
+
+  
+   .lightTitle {
+    color: ${({ theme }) => theme.colors.white100};
+  }
+
+   .lightText {
+    color: ${({ theme }) => theme.colors.silver100};
+  }
+
+   .alignItems {
+    margin: 0 auto;
+    color: red;
+  }
+
+   .countUp {
+    font-size: ${({ theme }) => theme.sizes.xhuge};
+    color: ${({ theme }) => theme.colors.primary};
+    font-weight: 800;
+  }
+
+   .metricIcon {
+    width: 40px;
+    height: 40px;
+    color: ${({ theme }) => theme.colors.secondary};
+  }
+
+   .sliderArrow {
+    width: 72%;
+    margin: 0 auto;
+
+    @media (max-width: 720px) {
+      width: 80%;
+    }
+  }
+
+ 
+
+   .headerScrolling {
+    position: fixed;
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+   .headerNotScrolling {
+    background-color: ${({ theme }) => theme.colors.black100};
+  }
+
+   .animatedTopScroll {
+    right: 24px;
+    transition: all 0.3s ease;
+  }
+   .normalTopScroll {
+    right: -80px;
+    transition: all 0.3s ease;
+  }
+
+  .collapsibleContainer{
+    color: ${({ theme }) => theme.colors.white500};
+    padding: 12px;
+    width: 96%;
+    border-radius: 4px;
+}
+.openedCollapsibleContainer{
+    background: ${({ theme }) => theme.colors.black100};
+    font-size: ${({ theme }) => theme.sizes.medium};
+    color: ${({ theme }) => theme.colors.white500};
+    padding: 16px;
+    font-weight: 700;
+    width: 96%;
+    border-radius: 4px;
+}
+
+.collapsibleContent {
+      height: 80px;
+    width: 96%;
+    border-radius: 4px;
+    background: ${({ theme }) => theme.colors.black100};
+    padding: 16px;
+     p {
+      color: ${({ theme }) => theme.colors.white500};
+      font-size: ${({ theme }) => theme.sizes.normal};
+      text-align: left;
+      width: 100%;
+      @media (max-width: 720px) {
+        font-size: ${({ theme }) => theme.sizes.small};
+      }
+    }
+  }
+
+  .testimonialCard{
+    background: -webkit-linear-gradient(13deg, rgb(31, 31, 31), rgb(255, 0, 72));
+    background: linear-gradient(13deg, rgb(31, 31, 31), rgb(255, 0, 72));
+  }
+
+  .nextImage{
+    margin: 0 auto;
+    @media (max-width: 720px) {
+        margin: 0 auto;
+      }
+  }
     
 `;

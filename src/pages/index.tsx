@@ -30,6 +30,8 @@ import {
   MetricsSection,
   MetricsSectionContainer,
   MetricsSectionContentContainer,
+  PurchaseSection,
+  PurchaseSectionSectionContainer,
   TestimonialSectionContainer,
   TestimonialsSection,
 } from '../styles'
@@ -159,7 +161,7 @@ const Home: NextPage = () => {
                 ratings={profile.ratings}
                 titleClassName='lightTitle'
                 testimonialClassName='lightText'
-                cardStyle={{ backgroundColor: theme.colors.black100 }}
+                cardClassName='testimonialCard'
               />
             ))}
           </CardSlider>
@@ -173,44 +175,71 @@ const Home: NextPage = () => {
           <FaqSectionCollapsableContainer>
             <CollapsibleInfo
               title='O acesso é vitalício?'
-              content='Sim o acesso ao curso é vitalício.'
+              content='Sim. O acesso ao curso é vitalício.'
               contentContainerClassName='collapsibleContent'
-              titleStyle={{ color: theme.colors.white100 }}
+              titleClassName='collapsibleContainer'
+              openedTitleClassName='openedCollapsibleContainer'
             />
             <CollapsibleInfo
               title='De onde posso acessar o curso?'
-              content='Você pode acessar o curso de qualquer dispositivo com conexão com a interface.'
+              content='Você pode acessar o curso de qualquer dispositivo com conexão com a internet.'
               contentContainerClassName='collapsibleContent'
-              titleStyle={{ color: theme.colors.white100 }}
+              titleClassName='collapsibleContainer'
+              openedTitleClassName='openedCollapsibleContainer'
 
             />
             <CollapsibleInfo
               title='Vou ter suporte para dúvidas?'
               content='Sim. Você tera direito a suporte de segunda à sexta, exceto feriados.'
               contentContainerClassName='collapsibleContent'
-              titleStyle={{ color: theme.colors.white100 }}
+              titleClassName='collapsibleContainer'
+              openedTitleClassName='openedCollapsibleContainer'
 
             />
             <CollapsibleInfo
               title='Existe um grupo de apoio?'
               content='Sim. Ao adquirir o curso, você terá livre acesso ao nosso grupo do Whatsapp.'
               contentContainerClassName='collapsibleContent'
-              titleStyle={{ color: theme.colors.white100 }}
+              titleClassName='collapsibleContainer'
+              openedTitleClassName='openedCollapsibleContainer'
 
             />
             <CollapsibleInfo
               title='Posso pedir reembolso?'
               content='Sim. Caso você não goste do curso por qualquer motivo, você tem 7 dias úteis para pedir reembolso.'
               contentContainerClassName='collapsibleContent'
-              titleStyle={{ color: theme.colors.white100 }}
+              titleClassName='collapsibleContainer'
+              openedTitleClassName='openedCollapsibleContainer'
             />
           </FaqSectionCollapsableContainer>
+        </FaqSectionSectionContainer>
+      </FaqSection>
+      <PurchaseSection id='purchase'>
+        <PurchaseSectionSectionContainer>
+          <SubTitle
+            content='Satisfação garantida'
+          />
+          <Text
+            content='Você tem 7 dias úteis para avaliar se o curso faz sentido para você, caso contrário, devolvemos seu dinehiro.'
+            className='lightText'
+          />
+          <NextImage
+            height={240}
+            width={240}
+            imgUrl='/warrant_seal3.png'
+            className='nextImage'
+            style={{margin: 'auto'}}
+          />
           <PrimaryButton
             title='Adquirir curso'
             onClick={() => { }}
+            style={{
+              backgroundColor: theme.colors.primary
+            }}
           />
-        </FaqSectionSectionContainer>
-      </FaqSection>
+        </PurchaseSectionSectionContainer>
+
+      </PurchaseSection>
     </Container>
   )
 }

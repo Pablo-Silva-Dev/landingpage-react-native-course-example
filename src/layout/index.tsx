@@ -9,6 +9,7 @@ import { FooterAttach } from '../components/Elements/Footer/FooterAttach';
 import { FooterFirstSection } from '../components/Elements/Footer/FooterFirstSection';
 import { FooterLink } from '../components/Elements/Footer/FooterLink';
 import { FooterSecondSection } from '../components/Elements/Footer/FooterSecondSection';
+import { FooterThirdSection } from '../components/Elements/Footer/FooterThirdSection';
 import { FooterTitle } from '../components/Elements/Footer/FooterTitle';
 import { Header } from '../components/Elements/Header';
 import { HeaderAuthenticationContainer } from '../components/Elements/Header/HeaderAuthenticationContainer';
@@ -100,7 +101,7 @@ export default function Layout({ children }: LayoutProps) {
                         />
                         <HeaderLink
                             content='Adquirir curso'
-                            url='/#faq'
+                            url='/#purchase'
                             onClick={handleToggleDrawer}
                         />
                     </Drawer>

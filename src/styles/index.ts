@@ -4,71 +4,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
-
-  & .lightTitle {
-    color: ${({ theme }) => theme.colors.white100};
-  }
-
-  & .lightText {
-    color: ${({ theme }) => theme.colors.silver100};
-  }
-
-  & .alignItems {
-    margin: 0 auto;
-    color: red;
-  }
-
-  & .countUp {
-    font-size: ${({ theme }) => theme.sizes.xhuge};
-    color: ${({ theme }) => theme.colors.primary};
-    font-weight: 800;
-  }
-
-  & .metricIcon {
-    width: 40px;
-    height: 40px;
-    color: ${({ theme }) => theme.colors.secondary};
-  }
-
-  & .sliderArrow {
-    width: 72%;
-    margin: 0 auto;
-
-    @media (max-width: 720px) {
-      width: 80%;
-    }
-  }
-
-  & .collapsibleContent {
-    padding: 8px;
-
-    & p {
-      color: ${({ theme }) => theme.colors.secondary};
-      font-size: ${({ theme }) => theme.sizes.normal};
-      @media (max-width: 720px) {
-        font-size: ${({ theme }) => theme.sizes.small};
-      }
-    }
-  }
-
-  & .headerScrolling {
-    position: fixed;
-    height: 40px;
-    background-color: ${({ theme }) => theme.colors.primary};
-  }
-
-  & .headerNotScrolling {
-    background-color: ${({ theme }) => theme.colors.black100};
-  }
-
-  & .animatedTopScroll {
-    right: 24px;
-    transition: all 0.3s ease;
-  }
-  & .normalTopScroll {
-    right: -80px;
-    transition: all 0.3s ease;
-  }
 `;
 
 export const BannerSection = styled.section`
@@ -76,7 +11,8 @@ export const BannerSection = styled.section`
   justify-content: center;
   width: 100%;
   min-height: 56vh;
-  background-color: ${({ theme }) => theme.colors.black300};
+  background: -webkit-linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
+  background: linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
 `;
 
 export const BannerSectionContainer = styled.div`
@@ -127,8 +63,9 @@ export const IntroductionSection = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 56vh;
-  background-color: ${({ theme }) => theme.colors.black400};
+  min-height: 80vh;
+  background: -webkit-linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
+  background: linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
 `;
 
 export const IntroductionSectionContainer = styled.div``;
@@ -145,7 +82,8 @@ export const IntroductionSectionContentContainer = styled.div`
     width: 100%;
   }
   & h3 {
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.white100};
+    text-align: center;
     @media (max-width: 720px) {
       width: 88%;
     }
@@ -164,7 +102,7 @@ export const MetricsSection = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 32vh;
+  min-height: 48vh;
   background-color: ${({ theme }) => theme.colors.black300};
 `;
 
@@ -203,7 +141,8 @@ export const TestimonialsSection = styled.section`
   justify-content: center;
   width: 100%;
   min-height: 32vh;
-  background-color: ${({ theme }) => theme.colors.black400};
+  background: -webkit-linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
+  background: linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
 `;
 
 export const TestimonialSectionContainer = styled.div`
@@ -217,7 +156,7 @@ export const TestimonialSectionContainer = styled.div`
     width: 100%;
   }
   & h3 {
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.white100};
     margin: 24px auto;
   }
 `;
@@ -227,17 +166,13 @@ export const FaqSection = styled.section`
   justify-content: center;
   width: 100%;
   min-height: 40vh;
-  background-color: ${({ theme }) => theme.colors.black500};
-  & h3 {
-    color: ${({ theme }) => theme.colors.primary};
-    margin: 24px auto;
-  }
+  background: -webkit-linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
+  background: linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
 `;
 
 export const FaqSectionSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 24px;
   align-items: center;
   justify-content: center;
   width: 1080px;
@@ -245,12 +180,12 @@ export const FaqSectionSectionContainer = styled.div`
     width: 100%;
   }
   & h3 {
-    color: ${({ theme }) => theme.colors.secondary};
-    margin: 24px auto;
+    color: ${({ theme }) => theme.colors.white100};
+    margin: 48px auto 0;
   }
   & button {
-    width: 800px;
-    margin-top: 24px;
+    width: 240px;
+    margin: 40px auto;
     @media (max-width: 720px) {
       width: 96%;
     }
@@ -262,10 +197,54 @@ export const FaqSectionCollapsableContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   width: 800px;
-  min-height: 480px;
-  padding: 24px;
-  background-color: ${({ theme }) => theme.colors.black100};
+  width: 100%;
+  min-height: 560px;
+  margin: 8px auto;
   @media (max-width: 720px) {
     width: 96%;
+    min-height: 640px;
+  }
+`;
+
+export const PurchaseSection = styled.section`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 40vh;
+  background-color: ${({ theme }) => theme.colors.black500};
+  background-image: url("/3px-tile.png");
+
+  & button {
+    margin: 24px auto;
+  }
+`;
+
+export const PurchaseSectionSectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1080px;
+  @media (max-width: 1080px) {
+    width: 100%;
+    align-items: center;
+  }
+  & h3 {
+    color: ${({ theme }) => theme.colors.white100};
+    margin: 48px auto 24px;
+  }
+  & p {
+    width: 80%;
+    text-align: center;
+    margin: 24px auto;
+
+    @media (min-width: 1080px) {
+      width: 50%;
+    }
+  }
+
+
+  & img {
+    margin: 24px auto;
   }
 `;

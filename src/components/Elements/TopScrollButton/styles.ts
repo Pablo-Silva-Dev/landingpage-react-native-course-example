@@ -4,7 +4,7 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.secondary};
   color: ${(props) => props.theme.colors.white100};
   position: fixed;
   bottom: 8vh;

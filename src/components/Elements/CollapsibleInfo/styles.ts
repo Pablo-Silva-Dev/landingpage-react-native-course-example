@@ -4,12 +4,14 @@ import styled from "styled-components";
 export const CollapsibleTrigger = styled(Collapsible)`
   cursor: pointer;
   font-weight: 700;
+  width: 100%;
 `;
 
 export const Container = styled.div`
-display: flex
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;
 
 export const Text = styled.p`
