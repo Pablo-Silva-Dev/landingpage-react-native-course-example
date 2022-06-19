@@ -4,8 +4,8 @@ import { name } from '../../../../package.json'
 
 interface NextImageProps {
     imgUrl: string;
-    width: number;
-    height: number;
+    width: string;
+    height: string;
     style?: CSSProperties;
     className?: string;
 }

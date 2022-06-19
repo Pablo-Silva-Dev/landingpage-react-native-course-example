@@ -69,8 +69,8 @@ const Home: NextPage = () => {
           <BannerSectionImageContainer>
             <NextImage
               imgUrl='/phone1.png'
-              height={640}
-              width={320}
+              height='640px'
+              width='320px'
             />
           </BannerSectionImageContainer>
         </BannerSectionContainer>
@@ -224,8 +224,8 @@ const Home: NextPage = () => {
             className='lightText'
           />
           <NextImage
-            height={240}
-            width={240}
+            height='240px'
+            width='240px'
             imgUrl='/warrant_seal3.png'
             className='nextImage'
             style={{margin: 'auto'}}
