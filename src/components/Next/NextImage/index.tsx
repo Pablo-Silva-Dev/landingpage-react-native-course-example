@@ -1,6 +1,7 @@
 import React, { CSSProperties } from 'react';
 import { NextImage as NextImageComponent, Container } from './styles';
-import { name } from '../../../../package.json'
+
+import { useAmp } from 'next/amp'
 
 interface NextImageProps {
     imgUrl: string;
@@ -17,17 +18,28 @@ export function NextImage({
     style,
     className
 }: NextImageProps) {
+
+    const isAmp = useAmp()
+
     return (
         <Container>
-            <NextImageComponent
-                src={imgUrl}
-                alt={name}
-                width={width}
-                height={height}
-                style={style}
-                className={className}
-                priority
-            />
+
+            {isAmp ? (
+                <NextImageComponent
+                    width={width}
+                    height={height}
+                    src={imgUrl}
+                    style={style}
+                    className={className}
+                    layout="responsive"
+                />
+            ) : (
+                <NextImageComponent
+                    width={width}
+                    height={height}
+                    src={imgUrl}
+                />
+            )}
         </Container>
     )
 }
