@@ -5,7 +5,8 @@ const nextConfig = {
     domains: [
       'images.unsplash.com',
     ]
-  }
+  },
+  optimizeFonts: true,
 }
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
