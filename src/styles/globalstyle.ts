@@ -1,7 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-      *{
+
+    @font-face {
+      font-family:  ${({ theme }) => theme.fonts.default};;
+      font-style: normal;
+      src: url(https://landingpage-react-native-course-example.vercel.app/_next/static/media/slick.653a4cbb.woff) format('woff2');
+      font-display: swap;
+      }
+
+    *{
         padding: 0;
         margin: 0;
         box-sizing: border-box;
@@ -184,5 +192,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0 auto;
       }
   }
+
+
     
 `;
