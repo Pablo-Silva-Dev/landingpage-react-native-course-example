@@ -25,6 +25,8 @@ export function NextImage({
                 width={width}
                 height={height}
                 style={style}
+                className={className}
+                priority
             />
         </Container>
     )
