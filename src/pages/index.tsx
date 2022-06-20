@@ -50,6 +50,9 @@ const Home: NextPage = () => {
     <Container>
       <Head>
         <title>PSD | NativePro</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="pablosilvadev" key="description" />
+        <meta name="keywords" content="pablosilvadev " key="keywords" />
       </Head>
 
       <BannerSection id='banner'>
@@ -228,7 +231,7 @@ const Home: NextPage = () => {
             width='240px'
             imgUrl='/warrant_seal3.png'
             className='nextImage'
-            style={{margin: 'auto'}}
+            style={{ margin: 'auto' }}
           />
           <PrimaryButton
             title='Adquirir curso'
