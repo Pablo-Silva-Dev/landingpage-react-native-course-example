@@ -53,6 +53,7 @@ const Home: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="pablosilvadev" key="description" />
         <meta name="keywords" content="pablosilvadev " key="keywords" />
+        <meta name="author" content="Pablo"/>
       </Head>
 
       <BannerSection id='banner'>

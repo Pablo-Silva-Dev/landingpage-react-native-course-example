@@ -112,6 +112,7 @@ export default function Layout({ children }: LayoutProps) {
                 <HeaderLogoContainer>
                     <Logo
                         imageUrl='/logo.svg'
+                        size={headerAnimation ? 'small' : 'medium'}
                     />
                 </HeaderLogoContainer>
                 <HeaderLinksContainer>
