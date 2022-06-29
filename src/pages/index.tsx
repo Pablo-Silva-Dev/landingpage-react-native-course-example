@@ -53,10 +53,17 @@ const Home: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="pablosilvadev" key="description" />
         <meta name="keywords" content="pablosilvadev " key="keywords" />
-        <meta name="author" content="Pablo"/>
+        <meta name="author" content="Pablo" />
       </Head>
-
-      <BannerSection id='banner'>
+      <BannerSection id='banner' >
+        <video
+          src="/video.mp4"
+          autoPlay
+          muted
+          loop
+          className='videoBackground'
+          id='tech'
+        />
         <BannerSectionContainer>
           <BannerSectionTitleContainer>
             <GradientText
@@ -70,13 +77,6 @@ const Home: NextPage = () => {
               className='lightText'
             />
           </BannerSectionTitleContainer>
-          <BannerSectionImageContainer>
-            <NextImage
-              imgUrl='/phone1.png'
-              height='640px'
-              width='320px'
-            />
-          </BannerSectionImageContainer>
         </BannerSectionContainer>
       </BannerSection>
       <IntroductionSection id='introduction'>

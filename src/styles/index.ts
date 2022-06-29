@@ -9,38 +9,42 @@ export const Container = styled.div`
 export const BannerSection = styled.section`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  min-height: 56vh;
   background: -webkit-linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
   background: linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
+  padding: 40px;
+
 `;
 
 export const BannerSectionContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 1080px;
-  @media (max-width: 1080px) {
-    flex-direction: column;
-    width: 100%;
+  width: 100%;
+  padding: 120px;
+  @media(max-width: 720px){
+    padding:0;
   }
 `;
 
 export const BannerSectionTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
-  padding: 40px;
+  align-items: center;
+  width: 100%;
   @media (max-width: 720px) {
     width: 98%;
-    margin: 0 auto;
+    margin: -40px auto 0;
+    padding: 0;
   }
 
   & h1 {
     font-size: ${({ theme }) => theme.sizes.huge};
+    text-align: center;
   }
-
+  
   & p {
-    margin-top: 40px;
+    text-align: center;
   }
 `;
 
@@ -66,6 +70,7 @@ export const IntroductionSection = styled.section`
   min-height: 80vh;
   background: -webkit-linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
   background: linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
+  z-index: 999;
 `;
 
 export const IntroductionSectionContainer = styled.div``;
@@ -104,6 +109,7 @@ export const MetricsSection = styled.section`
   width: 100%;
   min-height: 48vh;
   background-color: ${({ theme }) => theme.colors.black300};
+  z-index: 999;
 `;
 
 export const MetricsSectionContainer = styled.div`
