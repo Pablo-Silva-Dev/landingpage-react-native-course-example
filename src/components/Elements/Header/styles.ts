@@ -7,7 +7,7 @@ export const Container = styled.header`
   align-items: center;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.primary};
-  position: relative;
+  z-index:2;
 `;
 
 

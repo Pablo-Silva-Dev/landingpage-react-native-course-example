@@ -103,7 +103,7 @@ export const IntroductionSectionContentContainer = styled.div`
     color: ${({ theme }) => theme.colors.white100};
     text-align: center;
     @media (max-width: 720px) {
-      width: 88%;
+      width: 100%;
     }
   }
 
@@ -111,7 +111,7 @@ export const IntroductionSectionContentContainer = styled.div`
     width: 540px;
     color: ${({ theme }) => theme.colors.white400};
     @media (max-width: 720px) {
-      width: 88%;
+      width: 100%;
     }
   }
 `;
@@ -195,13 +195,12 @@ export const FaqSectionSectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 1080px;
-  padding: 40px;
   @media (max-width: 1080px) {
     width: 100%;
   }
   & h3 {
     color: ${({ theme }) => theme.colors.white100};
-    margin: 48px auto 0;
+    margin: 24px auto 12px;
   }
   & button {
     width: 240px;

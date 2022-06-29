@@ -74,12 +74,12 @@ const Home: NextPage = () => {
                 direction='left-to-right'
                 initialColor={theme.colors.primary}
                 finalColor={theme.colors.secondary}
-                content='NativePro | Aprenda React Native com profissionais!'
+                content='React Native Pro'
               />
             </RevealFade>
             <RevealFade bottom>
               <Text
-                content='Inicie hoje mesmo sua carreira como desenvolvedor e tenha acesso às melhores oportunidades do mercado de desenvolvimento mobile.'
+                content='Inicie hoje mesmo e tenha acesso às melhores oportunidades do mercado de desenvolvimento mobile.'
                 className='lightText'
               />
             </RevealFade>

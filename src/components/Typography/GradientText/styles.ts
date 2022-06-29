@@ -16,6 +16,6 @@ export const GradientText = styled(Gradient)<GradientTextProps>`
         : theme.sizes.normal};
   }
   @media (max-width: 720px) {
-    font-size: ${({ theme }) => theme.sizes.large};
+    font-size: ${({ theme }) => theme.sizes.medium};
   }
 `;
