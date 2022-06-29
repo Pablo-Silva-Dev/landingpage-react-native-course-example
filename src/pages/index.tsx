@@ -57,7 +57,7 @@ const Home: NextPage = () => {
       </Head>
       <BannerSection id='banner' >
         <video
-          src="/video.mp4"
+          src="/code-video.mp4"
           autoPlay
           muted
           loop

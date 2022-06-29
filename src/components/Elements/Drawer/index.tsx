@@ -25,10 +25,7 @@ export function Drawer({
     toggleDrawer,
     children,
     style,
-    className,
     buttonStyle,
-    menuStyle,
-    menuClassName
 }: DrawerProps) {
 
     const theme = useTheme()
@@ -37,12 +34,9 @@ export function Drawer({
         <Container
             direction={direction}
             role='menu'
-            style={style}
-            className={className}
         >
             <MenuContainer
-                style={menuStyle}
-                className={menuClassName}
+                style={style}
             >
                 <CloseMenuButton
                     style={buttonStyle}

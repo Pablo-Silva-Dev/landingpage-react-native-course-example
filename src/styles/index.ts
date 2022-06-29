@@ -4,6 +4,19 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
+
+  & .videoBackground{
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    opacity: .2;
+    z-index: 1;
+    @media(max-width: 720px) {
+      min-width: 100%;
+     min-height: 50%;
+    }
+  } 
 `;
 
 export const BannerSection = styled.section`
@@ -70,7 +83,7 @@ export const IntroductionSection = styled.section`
   min-height: 80vh;
   background: -webkit-linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
   background: linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
-  z-index: 999;
+  z-index: 2;
 `;
 
 export const IntroductionSectionContainer = styled.div``;
@@ -109,7 +122,7 @@ export const MetricsSection = styled.section`
   width: 100%;
   min-height: 48vh;
   background-color: ${({ theme }) => theme.colors.black300};
-  z-index: 999;
+  z-index: 2;
 `;
 
 export const MetricsSectionContainer = styled.div`

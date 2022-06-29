@@ -193,6 +193,7 @@ export const GlobalStyle = createGlobalStyle`
       }
   }
 
+/*   //ANIMATED VIDEO AS BACKGORUND 
   .videoBackground{
     position: absolute;
     right: 0;
@@ -200,12 +201,9 @@ export const GlobalStyle = createGlobalStyle`
     min-width: 100%;
     opacity: .2;
     z-index: 1;
-    &:first-child {
-      opacity: 1;
-    }
     @media(max-width: 720px) {
       min-width: 100%;
      min-height: 50%;
     }
-  }   
+  }  */  
 `;
