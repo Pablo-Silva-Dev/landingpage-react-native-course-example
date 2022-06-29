@@ -195,6 +195,7 @@ export const FaqSectionSectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 1080px;
+  padding: 40px;
   @media (max-width: 1080px) {
     width: 100%;
   }
@@ -215,10 +216,11 @@ export const FaqSectionCollapsableContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 800px;
   width: 100%;
   min-height: 560px;
   margin: 8px auto;
+  background-color: ${({ theme }) => theme.colors.black100};
+  border-radius: 4px;
   @media (max-width: 720px) {
     width: 96%;
     min-height: 640px;
@@ -231,7 +233,8 @@ export const PurchaseSection = styled.section`
   width: 100%;
   min-height: 40vh;
   background-color: ${({ theme }) => theme.colors.black500};
-  background-image: url("/3px-tile.png");
+  background: -webkit-linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
+  background: linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
 
   & button {
     margin: 24px auto;

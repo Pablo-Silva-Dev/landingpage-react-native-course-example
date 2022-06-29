@@ -41,6 +41,8 @@ import { profiles } from '../data/data'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
 import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo'
 import { PrimaryButton } from '../components/Elements/PrimaryButton'
+import { RevealFlip } from '../components/Animations/RevealFlip';
+import { RevealFade } from '../components/Animations/RevealFade';
 
 const Home: NextPage = () => {
 
@@ -66,31 +68,42 @@ const Home: NextPage = () => {
         />
         <BannerSectionContainer>
           <BannerSectionTitleContainer>
-            <GradientText
-              direction='left-to-right'
-              initialColor={theme.colors.primary}
-              finalColor={theme.colors.secondary}
-              content='NativePro | Aprenda React Native com profissionais!'
-            />
-            <Text
-              content='Inicie hoje mesmo sua carreira como desenvolvedor e tenha acesso às melhores oportunidades do mercado de desenvolvimento mobile.'
-              className='lightText'
-            />
+
+            <RevealFade>
+              <GradientText
+                direction='left-to-right'
+                initialColor={theme.colors.primary}
+                finalColor={theme.colors.secondary}
+                content='NativePro | Aprenda React Native com profissionais!'
+              />
+            </RevealFade>
+            <RevealFade bottom>
+              <Text
+                content='Inicie hoje mesmo sua carreira como desenvolvedor e tenha acesso às melhores oportunidades do mercado de desenvolvimento mobile.'
+                className='lightText'
+              />
+            </RevealFade>
           </BannerSectionTitleContainer>
         </BannerSectionContainer>
       </BannerSection>
       <IntroductionSection id='introduction'>
         <IntroductionSectionContainer>
           <IntroductionSectionContentContainer>
-            <SubTitle
-              content='Por que eu deveria aprender React Native?'
-            />
-            <Text
-              content='O mercado de desenvolvimento de aplicativos móveis está cada vez mais em alta. Segundo uma pesquisa realizada no Linkedin, o mercado brasileiro irá de precisar de mais 200 mil novos profissionais até 2025.'
-            />
-            <Text
-              content='Se você tem o desejo de entrar para o mercado de desenvolvimento mobile, ou se você já é desenvolvedor e deseja aprimorar seus conhecimentos e  habilidades, o NativePro foi feito para você!'
-            />
+            <RevealFade>
+              <SubTitle
+                content='Por que eu deveria aprender React Native?'
+              />
+            </RevealFade>
+            <RevealFade>
+              <Text
+                content='O mercado de desenvolvimento de aplicativos móveis está cada vez mais em alta. Segundo uma pesquisa realizada no Linkedin, o mercado brasileiro irá de precisar de mais 200 mil novos profissionais até 2025.'
+              />
+            </RevealFade>
+            <RevealFade>
+              <Text
+                content='Se você tem o desejo de entrar para o mercado de desenvolvimento mobile, ou se você já é desenvolvedor e deseja aprimorar seus conhecimentos e  habilidades, o NativePro foi feito para você!'
+              />
+            </RevealFade>
           </IntroductionSectionContentContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>
@@ -220,20 +233,24 @@ const Home: NextPage = () => {
       </FaqSection>
       <PurchaseSection id='purchase'>
         <PurchaseSectionSectionContainer>
-          <SubTitle
-            content='Satisfação garantida'
-          />
+          <RevealFade>
+            <SubTitle
+              content='Satisfação garantida'
+            />
+          </RevealFade>
           <Text
             content='Você tem 7 dias úteis para avaliar se o curso faz sentido para você, caso contrário, devolvemos seu dinehiro.'
             className='lightText'
           />
-          <NextImage
-            height='240px'
-            width='240px'
-            imgUrl='/warrant_seal3.png'
-            className='nextImage'
-            style={{ margin: 'auto' }}
-          />
+          <RevealFlip>
+            <NextImage
+              height='240px'
+              width='240px'
+              imgUrl='/warrant_seal3.png'
+              className='nextImage'
+              style={{ margin: 'auto' }}
+            />
+          </RevealFlip>
           <PrimaryButton
             title='Adquirir curso'
             onClick={() => { }}
