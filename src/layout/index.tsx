@@ -130,7 +130,7 @@ export default function Layout({ children }: LayoutProps) {
                         title='Adquirir curso'
                         onClick={() => { }}
                         style={{
-                            backgroundColor: theme.colors.primary
+                            backgroundColor: theme.colors.secondary
                         }}
                     />
                 </HeaderAuthenticationContainer>

@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   & .headerScrolling {
     position: fixed;
-    background-color: ${({ theme }) => theme.colors.black100};
+    background-color: ${({ theme }) => theme.colors.primary};
     z-index: 999;
     padding: 0 12px;
     transition: all 0.8s ease;

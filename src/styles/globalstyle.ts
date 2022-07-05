@@ -126,9 +126,7 @@ export const GlobalStyle = createGlobalStyle`
     @media (max-width: 720px) {
       width: 80%;
     }
-  }
-
- 
+  } 
 
    .headerScrolling {
     position: fixed;
@@ -149,32 +147,41 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .collapsibleContainer{
-    color: ${({ theme }) => theme.colors.white500};
-    padding: 12px;
-    width: 96%;
+    color: ${({ theme }) => theme.colors.white100};
+    padding: 24px 0;
+    width: 100%;
     border-radius: 4px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background: -webkit-linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
+  background: linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
 }
 .openedCollapsibleContainer{
-    background: ${({ theme }) => theme.colors.black100};
+    background: -webkit-linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
+  background: linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
     font-size: ${({ theme }) => theme.sizes.medium};
     color: ${({ theme }) => theme.colors.white500};
-    padding: 16px;
+    padding: 24px 0;
     font-weight: 700;
     width: 96%;
     border-radius: 4px;
+    text-align: center;
+    margin: 8px auto;
 }
 
 .collapsibleContent {
-      height: 80px;
-    width: 96%;
+    height: 80px;
+    text-align: center;
+    width: 100%;
     border-radius: 4px;
-    background: ${({ theme }) => theme.colors.black100};
-    padding: 16px;
+ 
+    padding: 8px;
      p {
       color: ${({ theme }) => theme.colors.white500};
       font-size: ${({ theme }) => theme.sizes.normal};
-      text-align: left;
-      width: 100%;
+      text-align: center;
+      width: 80%;
       @media (max-width: 720px) {
         font-size: ${({ theme }) => theme.sizes.small};
       }
@@ -193,17 +200,5 @@ export const GlobalStyle = createGlobalStyle`
       }
   }
 
-/*   //ANIMATED VIDEO AS BACKGORUND 
-  .videoBackground{
-    position: absolute;
-    right: 0;
-    top: 0;
-    min-width: 100%;
-    opacity: .2;
-    z-index: 1;
-    @media(max-width: 720px) {
-      min-width: 100%;
-     min-height: 50%;
-    }
-  }  */  
+
 `;

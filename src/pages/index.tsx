@@ -104,6 +104,13 @@ const Home: NextPage = () => {
                 content='Se você tem o desejo de entrar para o mercado de desenvolvimento mobile, ou se você já é desenvolvedor e deseja aprimorar seus conhecimentos e  habilidades, o NativePro foi feito para você!'
               />
             </RevealFade>
+            <RevealFade>
+              <NextImage
+                height='400'
+                width='420'
+                imgUrl='/coding.jpg'
+              />
+            </RevealFade>
           </IntroductionSectionContentContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>

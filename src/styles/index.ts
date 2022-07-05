@@ -4,18 +4,28 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
+  background: green;
 
   & .videoBackground{
     position: absolute;
     right: 0;
     top: 0;
     min-width: 100%;
+    min-height: 120vh;
     opacity: .2;
     z-index: 1;
-    @media(max-width: 720px) {
-      min-width: 100%;
-     min-height: 50%;
-    }
+    @media(max-width: 1440px){
+     min-height: 80vh;
+  } 
+  @media(max-width: 1080px){
+    min-height: 56vh;
+  }
+  @media(max-width: 720px){
+    min-height: 50vh;
+  }
+  @media(max-width: 480px){
+    min-height: 50%;
+  }
   } 
 `;
 
@@ -26,7 +36,7 @@ export const BannerSection = styled.section`
   width: 100%;
   background: -webkit-linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
   background: linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
-  padding: 40px;
+  padding: 40px 40px 0;
 
 `;
 
@@ -34,9 +44,9 @@ export const BannerSectionContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  padding: 120px;
+  padding: 120px 40px;
   @media(max-width: 720px){
-    padding:0;
+    padding: 0 40px 40px;
   }
 `;
 
@@ -46,18 +56,32 @@ export const BannerSectionTitleContainer = styled.div`
   align-items: center;
   width: 100%;
   @media (max-width: 720px) {
-    width: 98%;
-    margin: -40px auto 0;
-    padding: 0;
+    padding: -40px 0;
+    width: 200%;
   }
 
   & h1 {
     font-size: ${({ theme }) => theme.sizes.huge};
     text-align: center;
+    @media (max-width: 1080px) {
+      width: 100%;
+      margin: 0 auto;
+      font-size: ${({ theme }) => theme.sizes.large};
+  }
+    
   }
   
   & p {
     text-align: center;
+    margin: 0 auto;
+    width: 40%;
+    @media (max-width: 1080px) {
+      width: 80%;
+  }
+    @media (max-width: 720px) {
+      font-size: ${({ theme }) => theme.sizes.small};
+      width: 100%;
+  }
   }
 `;
 
@@ -80,7 +104,7 @@ export const IntroductionSection = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 80vh;
+  min-height: 40vh;
   background: -webkit-linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
   background: linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
   z-index: 2;
@@ -90,7 +114,6 @@ export const IntroductionSectionContainer = styled.div``;
 export const IntroductionSectionContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
   padding: 40px;
   width: 1080px;
@@ -102,6 +125,7 @@ export const IntroductionSectionContentContainer = styled.div`
   & h3 {
     color: ${({ theme }) => theme.colors.white100};
     text-align: center;
+    margin: 16px auto;
     @media (max-width: 720px) {
       width: 100%;
     }
@@ -109,6 +133,7 @@ export const IntroductionSectionContentContainer = styled.div`
 
   & p {
     width: 540px;
+    margin: 16px auto;
     color: ${({ theme }) => theme.colors.white400};
     @media (max-width: 720px) {
       width: 100%;
@@ -120,9 +145,15 @@ export const MetricsSection = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 48vh;
+  min-height: 80vh;
   background-color: ${({ theme }) => theme.colors.black300};
   z-index: 2;
+  @media(max-width: 1440px){
+    min-height: 56vh;
+  }
+  @media(max-width: 1080px){
+    min-height: 40vh;
+  }
 `;
 
 export const MetricsSectionContainer = styled.div`
@@ -184,7 +215,11 @@ export const FaqSection = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 40vh;
+  min-height: 56vh;
+  padding: 40px;
+  @media (max-width: 720px){
+    padding: 40px 24px;
+  }
   background: -webkit-linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
   background: linear-gradient(-28deg, rgb(255, 94, 0), rgb(255, 0, 72));
 `;
@@ -194,19 +229,19 @@ export const FaqSectionSectionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 1080px;
+  width: 1440px;
   @media (max-width: 1080px) {
     width: 100%;
   }
   & h3 {
     color: ${({ theme }) => theme.colors.white100};
-    margin: 24px auto 12px;
+    margin: 0 auto 16px;
   }
   & button {
     width: 240px;
     margin: 40px auto;
     @media (max-width: 720px) {
-      width: 96%;
+      width: 100%;
     }
   }
 `;
@@ -214,15 +249,11 @@ export const FaqSectionSectionContainer = styled.div`
 export const FaqSectionCollapsableContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   width: 100%;
-  min-height: 560px;
   margin: 8px auto;
-  background-color: ${({ theme }) => theme.colors.black100};
   border-radius: 4px;
   @media (max-width: 720px) {
-    width: 96%;
-    min-height: 640px;
+    width: 100%;
   }
 `;
 
@@ -232,8 +263,6 @@ export const PurchaseSection = styled.section`
   width: 100%;
   min-height: 40vh;
   background-color: ${({ theme }) => theme.colors.black500};
-  background: -webkit-linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
-  background: linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
 
   & button {
     margin: 24px auto;
